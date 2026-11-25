@@ -1,0 +1,19 @@
+# Datasets & Kaggle credentials
+data/
+*.zip
+kaggle.json
+.kaggle/
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# OS & Editor
+.DS_Store
+.vscode/
+.idea/
