@@ -10,10 +10,10 @@ Ce dépôt contient le projet du Groupe 3 pour le cours de **Machine Learning Av
 
 | Membre | Rôle | Mission | Livrable | Statut |
 | :--- | :--- | :--- | :--- | :--- |
-| **1 — Dataset** | Exploration & Chargement | Télécharger FER2013, explorer les 7 émotions, compter les images par classe, afficher des exemples, préparer les `DataLoader` PyTorch (`train` / `val` / `test`). | [Projet_LogReg_EL_HAYA_Douaa.ipynb](notebooks/Projet_LogReg_EL_HAYA_Douaa.ipynb) | ✅ Terminé |
-| **2 — Prétraitement & PCA** | Transformation & Réduction | Créer la fonction de conversion en vecteurs NumPy (`to_numpy`) et préparer le pipeline PCA (`n_components=150`), tester sur données fictives puis intégrer. | Section 2 du notebook final | 🔄 En cours |
-| **3 — Modèle** | Régression Logistique | Configurer `LogisticRegression(multi_class="multinomial", solver="lbfgs")` et `GridSearchCV`, tester sur données fictives à 7 classes puis entraîner. | Section 3 du notebook final | 🔄 En cours |
-| **4 — Évaluation & Rédaction** | Métriques & Rapport | Rédiger l'introduction, expliquer FER2013 et la méthode, préparer les fonctions `accuracy`, `classification_report` et matrice de confusion (`heatmap`). | Sections 0 & 4 du notebook final | 🔄 En cours |
+| **1 — Dataset** | Exploration & Chargement | Télécharger FER2013, explorer les 7 émotions, compter les images par classe, afficher des exemples, préparer les `DataLoader` PyTorch (`train` / `val` / `test`). | [project.ipynb](project.ipynb) (Partie 1) | ✅ Terminé |
+| **2 — Prétraitement & PCA** | Transformation & Réduction | Créer la fonction de conversion en vecteurs NumPy (`to_numpy`), normaliser (`StandardScaler`) et appliquer le pipeline PCA (`n_components=150`), tester sur données fictives puis intégrer. | [project.ipynb](project.ipynb) (Partie 2) | ✅ Terminé |
+| **3 — Modèle** | Régression Logistique | Configurer `LogisticRegression(solver="lbfgs")` (multinomial, régularisation L2) et `GridSearchCV` sur `C`, tester sur données fictives à 7 classes, entraîner sur `X_train_pca` et visualiser les résultats. | [project.ipynb](project.ipynb) (Partie 3) | ✅ Terminé |
+| **4 — Évaluation & Rédaction** | Métriques & Rapport | Rédiger l'introduction, expliquer FER2013 et la méthode, préparer les fonctions `accuracy`, `classification_report` et matrice de confusion (`heatmap`). | [project.ipynb](project.ipynb) (Intro & Partie 4) | 🔄 En cours |
 
 ---
 
@@ -21,10 +21,8 @@ Ce dépôt contient le projet du Groupe 3 pour le cours de **Machine Learning Av
 
 ```text
 ML-Avance-G3/
-├── notebooks/
-│   ├── Projet_LogReg_EL_HAYA_Douaa.ipynb        # Partie 1 complète (Exploration & DataLoaders)
-│   ├── ProjectMachineLearning_Groupe3.ipynb     # Notebook livrable unifié (Parties 1 à 4)
-│   └── ProjectMachineLearning_raw_template.ipynb # Template de référence initial
+├── project.ipynb       # Notebook livrable unifié (Parties 1 à 4)
+├── statement.pdf       # Énoncé du projet
 ├── .gitignore
 ├── requirements.txt
 └── README.md
@@ -40,9 +38,9 @@ pip install -r requirements.txt
 ```
 
 ### Sur Google Colab (recommandé pour le dataset Kaggle)
-1. Ouvrir `notebooks/ProjectMachineLearning_Groupe3.ipynb` dans Google Colab.
+1. Ouvrir `project.ipynb` dans Google Colab.
 2. Importer votre fichier `kaggle.json` ou le ZIP FER2013 dans `/content/`.
-3. Exécuter les cellules dans l'ordre.
+3. Exécuter les cellules dans l'ordre (`Runtime → Restart and run all`).
 
 ---
 
